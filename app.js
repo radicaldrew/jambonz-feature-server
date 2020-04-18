@@ -16,7 +16,7 @@ const opts = Object.assign({
   timestamp: () => {return `, "time": "${new Date().toISOString()}"`;}
 }, {level: process.env.JAMBONES_LOGLEVEL || 'info'});
 const logger = require('pino')(opts);
-const {LifeCycleEvents} = require('./constants');
+const {LifeCycleEvents} = require('./lib/utils/constants.json');
 const installSrfLocals = require('./lib/utils/install-srf-locals');
 installSrfLocals(srf, logger);
 
