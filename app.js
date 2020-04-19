@@ -16,7 +16,7 @@ const opts = Object.assign({
   timestamp: () => {return `, "time": "${new Date().toISOString()}"`;}
 }, {level: process.env.JAMBONES_LOGLEVEL || 'info'});
 const logger = require('pino')(opts);
-const {LifeCycleEvents} = require('./lib/utils/constants.json');
+const {LifeCycleEvents} = require('./lib/utils/constants');
 const installSrfLocals = require('./lib/utils/install-srf-locals');
 installSrfLocals(srf, logger);
 
@@ -77,7 +77,8 @@ logger.info(`listening for HTTP requests on port ${PORT}, serviceUrl is ${srf.lo
 const sessionTracker = srf.locals.sessionTracker = require('./lib/session/session-tracker');
 sessionTracker.on('idle', () => {
   if (srf.locals.lifecycleEmitter.operationalState === LifeCycleEvents.ScaleIn) {
-    //TODO: complete scale-in
+    logger.info('scale-in complete now that calls have dried up');
+    srf.locals.lifecycleEmitter.scaleIn();
   }
 });
 

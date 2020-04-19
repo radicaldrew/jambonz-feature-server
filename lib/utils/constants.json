@@ -62,8 +62,8 @@
   },
   "LifeCycleEvents" : {
     "ScaleIn": "scale-in",
-    "PendingEnter": "pending-enter",
-    "PendingExit": "pending-exit"
+    "StandbyEnter": "standby-enter",
+    "StandbyExit": "standby-exit"
   },
   "MAX_SIMRINGS": 10
 }
