@@ -158,7 +158,7 @@
     "properties": {
       "type": {
         "type": "string",
-        "enum": ["phone", "sip", "user"]
+        "enum": ["phone", "sip", "user", "conference"]
       },
       "url": "string",
       "method": {
@@ -168,7 +168,15 @@
       "number": "string",
       "sipUri": "string",
       "auth": "#auth",
-      "name": "string"
+      "name": "string",
+      "beep": "boolean",
+      "startConferenceOnEnter": "boolean",
+      "endConferenceOnExit": "boolean",
+      "maxParticipants": "number",
+      "waitHook": "object|string",
+      "statusHook": "object|string",
+      "enterHook": "object|string",
+      "endHook": "object|string"
     },
     "required": [
       "type"
