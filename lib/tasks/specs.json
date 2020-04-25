@@ -181,6 +181,7 @@
         "type": "string",
         "enum": ["GET", "POST"]
       },
+      "name": "string",
       "number": "string",
       "sipUri": "string",
       "auth": "#auth"
