@@ -63,6 +63,7 @@
       "maxParticipants": "number",
       "actionHook": "object|string",
       "waitHook": "object|string",
+      "statusEvents": "array",
       "statusHook": "object|string",
       "enterHook": "object|string"
     },
