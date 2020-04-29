@@ -28,7 +28,7 @@
   },
   "say": {
     "properties": {
-      "text": "string",
+      "text": "string|array",
       "loop": "number",
       "synthesizer": "#synthesizer",
       "earlyMedia": "boolean"
@@ -188,9 +188,14 @@
     "properties": {
       "vendor": {
         "type": "string",
-        "enum": ["google"]
+        "enum": ["google", "aws", "polly"]
       },
-      "voice": "string"
+      "language": "string",
+      "voice": "string",
+      "gender": {
+        "type": "string",
+        "enum": ["MALE", "FEMALE", "NEUTRAL"]
+      }
     },
     "required": [
       "vendor"
