@@ -112,12 +112,37 @@
       "target": ["#target"],
       "timeLimit": "number",
       "timeout": "number",
+      "proxy": "string",
       "transcribe": "#transcribe"
     },
     "required": [
       "target"
     ]
   },
+<<<<<<< HEAD
+=======
+  "dialogflow": {
+    "properties": {
+      "credentials": "object|string",
+      "project": "string",
+      "lang": "string",
+      "actionHook": "object|string",
+      "eventHook": "object|string",
+      "events": "[string]",
+      "welcomeEvent": "string",
+      "welcomeEventParams": "object",
+      "noInputTimeout": "number",
+      "noInputEvent": "string",
+      "passDtmfAsTextInput": "boolean",
+      "thinkingMusic": "string"
+    },
+    "required": [
+      "project",
+      "credentials",
+      "lang"
+    ]
+  },
+>>>>>>> 884e63e... allow proxy in dial verb
   "listen": {
     "properties": {
       "actionHook": "object|string",
@@ -167,6 +192,7 @@
       "from": "string",
       "speech_synthesis_vendor": "string",
       "speech_synthesis_voice": "string",
+      "speech_synthesis_language": "string",
       "speech_recognizer_vendor": "string",
       "speech_recognizer_language": "string",
       "tag": "object",
