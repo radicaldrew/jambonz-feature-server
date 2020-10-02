@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@jambonz/db-helpers": "^0.5.0",
-    "@jambonz/realtimedb-helpers": "^0.2.16",
+    "@jambonz/realtimedb-helpers": "^0.2.17",
     "@jambonz/stats-collector": "^0.0.4",
     "bent": "^7.3.9",
     "cidr-matcher": "^2.1.1",
@@ -47,9 +47,10 @@
   "devDependencies": {
     "blue-tape": "^1.0.0",
     "clear-module": "^4.1.1",
-    "eslint": "^7.7.0",
+    "eslint": "^7.10.0",
     "eslint-plugin-promise": "^4.2.1",
     "nyc": "^15.1.0",
+    "tap-dot": "^2.0.0",
     "tap-spec": "^5.0.0"
   }
 }
